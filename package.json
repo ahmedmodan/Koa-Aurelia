@@ -1,0 +1,38 @@
+{
+  "name": "learn_koa",
+  "version": "1.0.0",
+  "description": "a learning experience for koa",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon node_modules/babel-cli/bin/babel-node.js app.js",
+    "debug": "nodemon node_modules/babel-cli/bin/babel-node.js --debug --presets es2015 -- app.js --debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmedmodan/learnkoa.git"
+  },
+  "keywords": [
+    "koa",
+    "es6",
+    "generators"
+  ],
+  "author": "Ahmed Modan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmedmodan/learnkoa/issues"
+  },
+  "homepage": "https://github.com/ahmedmodan/learnkoa#readme",
+  "dependencies": {
+    "koa": "^1.1.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-eslint": "^4.1.8",
+    "babel-preset-es2015": "^6.5.0",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^5.0.0",
+    "eslint-plugin-babel": "^3.1.0",
+    "nodemon": "^1.8.1"
+  }
+}

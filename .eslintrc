@@ -1,0 +1,12 @@
+{
+  "parser"  : "babel-eslint",
+  "extends": "airbnb/base",
+  "ecmaFeatures": {
+    "modules": true
+    },
+    "rules": {
+      "func-names": 0,
+      "no-mixed-spaces-and-tabs": 1,
+      "prefer-const": 0
+    }
+}
