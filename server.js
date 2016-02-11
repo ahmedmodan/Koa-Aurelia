@@ -1,4 +1,5 @@
 import koa from 'Koa';
+import serve from 'koa-static';
 import koaRouter from 'koa-router';
 import generators from './server/generators/generatorExports';
 
@@ -9,7 +10,7 @@ generators.errorTest();
 const router = koaRouter();
 const app = koa();
 
-router.get('/', function *() {
+router.get('/homepage', function *() {
   this.body = 'This is the home page!';
 });
 
@@ -17,6 +18,8 @@ router.get('/secret', function *() {
   this.body = 'This is the secret page!';
 });
 
+
+app.use(serve(`${__dirname}`));
 app.use(router.routes());
 
 app.listen(process.env.PORT || 3000);
