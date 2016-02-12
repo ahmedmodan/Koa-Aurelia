@@ -19,7 +19,7 @@ router.get('/secret', function *() {
 });
 
 
-app.use(serve(`${__dirname}`));
+app.use(serve(`${__dirname}/public`));
 app.use(router.routes());
 
 app.listen(process.env.PORT || 3000);
