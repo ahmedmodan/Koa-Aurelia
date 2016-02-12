@@ -1,8 +1,8 @@
-import iterator from './iteratorGenerator';
-import errorTest from './errorTestGenerator';
-import alphabet from './alphabetGenerator';
+const iterator = require('./iteratorGenerator');
+const errorTest = require('./errorTestGenerator');
+const alphabet = require('./alphabetGenerator');
 
-export default {
+module.exports = {
   iterator,
   errorTest,
   alphabet,

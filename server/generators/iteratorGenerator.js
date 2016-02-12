@@ -1,4 +1,4 @@
-
+'use strict';
 // THE FOLLOWING LINES WILL ITERATE OVER THE print10 FUNCTION AND LOG THE YIELDS TO THE CONSOLE
 // IT WILL ALSO YIELD CONTROL TO ANOTHER GENERATOR FUNCTION THAT WILL LOG THE NUMBERS BETWEEN
 // 5 AND 6 IN STEPS OF .1
@@ -29,7 +29,7 @@ function *print10() {
   yield 10;
 }
 
-export default () => {
+module.exports = () => {
   for (let num of print10()) {
     console.log(num);
   }

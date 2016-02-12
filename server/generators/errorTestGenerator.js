@@ -1,3 +1,4 @@
+'use strict';
 // THE FOLLOWING LINES WILL CAUSE A GENERATOR TO THROW AN ERROR AND LOG IT TO THE CONSOLE
 
 function *sum(val1) {
@@ -12,7 +13,7 @@ function *sum(val1) {
 let summed = sum('hello');
 
 
-export default () => {
+module.exports = () => {
   try {
     summed.next();
     summed.next(77);

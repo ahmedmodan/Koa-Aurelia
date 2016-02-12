@@ -1,4 +1,5 @@
 // THE FOLLOWING LINES WILL PRINT AN ALPHABET TO THE CONSOLE.
+'use strict';
 
 const alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
@@ -27,4 +28,4 @@ function stopLog() {
   clearInterval(logID);
 }
 
-export default () => setTimeout(stopLog, 8400);
+module.exports = () => setTimeout(stopLog, 8400);

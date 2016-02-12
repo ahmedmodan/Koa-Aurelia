@@ -1,7 +1,7 @@
-import koa from 'Koa';
-import serve from 'koa-static';
-import koaRouter from 'koa-router';
-import generators from './server/generators/generatorExports';
+const koa = require('Koa');
+const serve = require('koa-static');
+const koaRouter = require('koa-router');
+const generators = require('./server/generators/generatorExports');
 
 generators.iterator();
 generators.alphabet();
