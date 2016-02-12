@@ -21,8 +21,8 @@
   "scripts": {
     "test": "gulp test",
     "e2e": "gulp serve webdriver-standalone e2e",
-    "start": "nodemon node_modules/babel-cli/bin/babel-node.js server.js",
-    "debug": "nodemon node_modules/babel-cli/bin/babel-node.js --debug --presets es2015 -- server.js --debug"
+    "start": "nodemon server.js",
+    "debug": "nodemon server.js --debug"
 
   },
   "devDependencies": {
