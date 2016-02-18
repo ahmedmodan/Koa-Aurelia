@@ -5,5 +5,5 @@ const alphabet = require('./alphabetGenerator');
 module.exports = {
   iterator,
   errorTest,
-  alphabet,
+  alphabet
 };
