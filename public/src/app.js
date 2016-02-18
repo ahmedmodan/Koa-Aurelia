@@ -1,6 +1,8 @@
 export default class App {
   configureRouter(config, router) {
     config.title = 'Ahmed Modan';
+    config.options.pushState = true;
+    config.options.hashChange = false;
     config.map([
       {
         route: ['', 'counter'],
