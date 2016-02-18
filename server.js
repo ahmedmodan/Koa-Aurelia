@@ -1,6 +1,7 @@
 const koa = require('Koa');
 const serve = require('koa-static');
 const koaRouter = require('koa-router');
+const historyApiFallback = require('koa-connect-history-api-fallback');
 const generators = require('./server/generators/generatorExports');
 
 generators.iterator();
@@ -10,16 +11,16 @@ generators.errorTest();
 const router = koaRouter();
 const app = koa();
 
-router.get('/homepage', function *() {
+router.get('/homepage', function* () {
   this.body = 'This is the home page!';
 });
 
-router.get('/secret', function *() {
+router.get('/secret', function* () {
   this.body = 'This is the secret page!';
 });
 
-
-app.use(serve(`${__dirname}`));
+app.use(historyApiFallback());
+app.use(serve(`${__dirname}/public`));
 app.use(router.routes());
 
 app.listen(process.env.PORT || 3000);

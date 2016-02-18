@@ -1,0 +1,5 @@
+<template>
+  <h1 if.bind="shown">${message}</h1>
+  <button if.bind="shown" onclick.bind="toggleShown">Hide Message</button>
+  <button if.bind="!shown" onclick.bind="toggleShown">Show Message</button>
+</template>
