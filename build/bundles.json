@@ -31,7 +31,7 @@
       ],
       "options": {
         "inject": true,
-        "minify": false,
+        "minify": true,
         "rev": true
       }
     }
