@@ -1,4 +1,4 @@
-const koa = require('Koa');
+const koa = require('koa');
 const serve = require('koa-static');
 const koaRouter = require('koa-router');
 const historyApiFallback = require('koa-connect-history-api-fallback');
