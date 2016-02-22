@@ -1,7 +1,7 @@
 const koa = require('koa');
-const serve = require('koa-static');
+// const serve = require('koa-static');
 const koaRouter = require('koa-router');
-const historyApiFallback = require('koa-connect-history-api-fallback');
+// const historyApiFallback = require('koa-connect-history-api-fallback');
 const generators = require('./server/generators/generatorExports');
 
 generators.iterator();
@@ -19,9 +19,9 @@ router.get('/secret', function* () {
   this.body = 'This is the secret page!';
 });
 
-app.use(historyApiFallback());
-app.use(serve(`${__dirname}/public`));
+// app.use(historyApiFallback());
+// app.use(serve(`${__dirname}/public`));
 app.use(router.routes());
 
-app.listen(process.env.PORT || 3000);
+app.listen(3000);
 console.log('Koa listening on port 3000');
