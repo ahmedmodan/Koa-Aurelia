@@ -226,7 +226,7 @@ System.config({
       "app.js",
       "main.js"
     ],
-    "aurelia-ec1675ec30.js": [
+    "aurelia-99f5d201da.js": [
       "github:components/jquery@2.2.0.js",
       "github:components/jquery@2.2.0/jquery.js",
       "github:jspm/nodelibs-process@0.1.2.js",
@@ -319,4 +319,4 @@ System.config({
     ]
   },
   depCache: {}
-})
+});
