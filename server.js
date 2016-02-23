@@ -19,7 +19,7 @@ router.get('/secret', function* () {
   this.body = 'This is the secret page!';
 });
 
-router.get('/api', function* () {
+router.get('/api/test', function* () {
   this.body = 'Hello Node Server!';
 });
 
@@ -27,5 +27,5 @@ router.get('/api', function* () {
 // app.use(serve(`${__dirname}/public`));
 app.use(router.routes());
 
-app.listen(3000);
-console.log('Koa listening on port 3000');
+app.listen(3008);
+console.log('Koa listening on port 3008');
