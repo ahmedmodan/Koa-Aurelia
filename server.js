@@ -11,7 +11,7 @@ generators.errorTest();
 const router = koaRouter();
 const app = koa();
 
-router.get('/homepage/test', function* () {
+router.get('/homepage', function* () {
   this.body = 'This is the home page!';
 });
 
@@ -19,11 +19,7 @@ router.get('/secret', function* () {
   this.body = 'This is the secret page!';
 });
 
-router.get('/app', function* () {
-  this.body = 'Hello Node Server!';
-});
-
-router.get('/end/point', function* () {
+router.get('/api', function* () {
   this.body = 'Hello Node Server!';
 });
 

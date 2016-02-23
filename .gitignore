@@ -3,3 +3,4 @@ typings
 .vscode
 jspm_packages
 public/dist
+npm-debug.log
