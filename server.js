@@ -19,7 +19,11 @@ router.get('/secret', function* () {
   this.body = 'This is the secret page!';
 });
 
-router.get('/api', function* () {
+router.get('/app', function* () {
+  this.body = 'Hello Node Server!';
+});
+
+router.get('/end/point', function* () {
   this.body = 'Hello Node Server!';
 });
 
