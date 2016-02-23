@@ -19,6 +19,10 @@ router.get('/secret', function* () {
   this.body = 'This is the secret page!';
 });
 
+router.get('/api/test', function* () {
+  this.body = 'Hello Node Server!';
+});
+
 // app.use(historyApiFallback());
 // app.use(serve(`${__dirname}/public`));
 app.use(router.routes());
