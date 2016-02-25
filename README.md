@@ -1,19 +1,18 @@
-# aurelia-skeleton-navigation
+# Personal Site at [ahmedmodan.com](http://ahmedmodan.com)
 
-[![ZenHub](https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png)](https://zenhub.io)
-[![Join the chat at https://gitter.im/aurelia/discuss](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/aurelia/discuss?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+This is the repo for my personal website. I know it is a little overengineered for what it is. I wanted to
+try a bunch of technologies and I also wanted to create a persoanl website so this is the result of those two desires.
+The front end is built atop the Aurelia js framework and the backend is built atop Koajs. The blogging service is provided by
+the open source bloggin platform Ghost.
 
-This skeleton is part of the [Aurelia](http://www.aurelia.io/) platform. It sets up a standard navigation-style app using gulp to build your ES6 code with the Babel compiler. Karma/Protractor/Jasmine testing is also configured.
+## Get Started
 
-> To keep up to date on [Aurelia](http://www.aurelia.io/), please visit and subscribe to [the official blog](http://blog.durandal.io/). If you have questions, we invite you to [join us on Gitter](https://gitter.im/aurelia/discuss). If you would like to have deeper insight into our development process, please install the [ZenHub](https://zenhub.io) Chrome Extension and visit any of our repository's boards. You can get an overview of all Aurelia work by visiting [the framework board](https://github.com/aurelia/framework#boards).
+To run the application follow these steps:
 
-## Running The App
+1. Ensure that the latest stable version of [NodeJS](http://nodejs.org/) is installed.
+This is necessary to run the application.
 
-To run the app, follow these steps.
-
-1. Ensure that [NodeJS](http://nodejs.org/) is installed. This provides the platform on which the build tooling runs.
-2. From the project folder, execute the following command:
-
+2. Once you are in the project folder execute the following command:
   ```shell
   npm install
   ```
@@ -23,6 +22,7 @@ To run the app, follow these steps.
   npm install -g gulp
   ```
   > **Note:** Gulp must be installed globally, but a local version will also be installed to ensure a compatible version is used for the project.
+
 4. Ensure that [jspm](http://jspm.io/) is installed globally. If you need to install it, use the following command:
 
   ```shell
@@ -31,45 +31,37 @@ To run the app, follow these steps.
   > **Note:** jspm must be installed globally, but a local version will also be installed to ensure a compatible version is used for the project.
 
   > **Note:** jspm queries GitHub to install semver packages, but GitHub has a rate limit on anonymous API requests. It is advised that you configure jspm with your GitHub credentials in order to avoid problems. You can do this by executing `jspm registry config github` and following the prompts. If you choose to authorize jspm by an access token instead of giving your password (see GitHub `Settings > Personal Access Tokens`), `public_repo` access for the token is required.
+
 5. Install the client-side dependencies with jspm:
 
   ```shell
-  jspm install -y
+  jspm install
   ```
   >**Note:** Windows users, if you experience an error of "unknown command unzip" you can solve this problem by doing `npm install -g unzip` and then re-running `jspm install`.
-6. To run the app, execute the following command:
+
+6. Before you run the app browse to the `server.js` file in the root directory and uncomment lines: `5,6,28 AND 29`;
+This will serve up the static assets from the node server so you can run the application.
+
+  >**Note:** For deployment it is recommended to comment these lines out and use NGINX to serve up the static files to avoid puttin unneccesary load on the node server.
+
+8.
+
+7. To run the app execute the following commands in order (if you would not like to run the server and would like to run the client side code only, skip to step 9):
+
+  ```shell
+  gulp build
+  npm start
+  ```
+
+8. Browse to [http://localhost:3008](http://localhost:3008) to see the app.
+
+9. If you want to make changes to client side code and see the page refresh as you save the changes, you can run the following command:
 
   ```shell
   gulp watch
   ```
-7. Browse to [http://localhost:9000](http://localhost:9000) to see the app. You can make changes in the code found under `src` and the browser should auto-refresh itself as you save files.
-
-> The Skeleton App uses [BrowserSync](http://www.browsersync.io/) for automated page refreshes on code/markup changes concurrently across multiple browsers. If you prefer to disable the mirroring feature set the [ghostMode option](http://www.browsersync.io/docs/options/#option-ghostMode) to false
-
-## Running The App under Electron
-
-To run the app under [Electron](http://electron.atom.io), follow these steps.
-
-1. Install [Electron](http://electron.atom.io)
-
-  ```shell
-  npm install electron-prebuilt -g
-  ```
-2. To start the app, execute the following command:
-
-  ```shell
-  electron index.js
-  ```
->**Note:** If you use electron every time or are packaging and so-forth, Then change this line in package.json from
-`"main": "dist/main.js",` to `"main": "index.js",`
-Build the app (this will give you a dist directory)
-```shell
-gulp build
-```
-To start the app, execute the following command:
-```shell
-   electron .
-```
+  * Browse to [http://localhost:9000](http://localhost:9000) to see the app. You can make changes in the code found under `src` and the browser should auto-refresh itself as you save files.
+  >**Note:** Browsing the app at while running `gulp watch` will not run the node server. If you want to run the node server follow steps 7 and 8.
 
 
 ## Bundling
@@ -84,64 +76,59 @@ You can also unbundle using the command bellow:
   ```shell
   gulp unbundle
   ```
-#### Configuration
-The configuration is done by ```bundles.json``` file.
-##### Optional
-Under ```options``` of ```dist/aurelia``` add ```rev: true``` to add bundle file revision/version.
 
-## Running The Unit Tests
+---
 
-To run the unit tests, first ensure that you have followed the steps above in order to install all dependencies and successfully build the library. Once you have done that, proceed with these additional steps:
+##Technologies
+ The following is a list of technologies this project uses. This project is based off the the Aurelia es2015 skeleton.
 
-1. Ensure that the [Karma](http://karma-runner.github.io/) CLI is installed. If you need to install it, use the following command:
+ * [Aurelia](http://aurelia.io/)
+ * [KoaJS](http://koajs.com/)
+ * [Koa-Router](https://github.com/alexmingoia/koa-router)
+ * [Koa-static](https://github.com/koajs/static)
+ * [Koa-connect-history-api-fallback](https://github.com/davezuko/koa-connect-history-api-fallback)
+ * [Babel](https://babeljs.io/)
+ * [Gulp](http://gulpjs.com/)
+ * [ESLint](http://eslint.org/)
+ * [Jasmine](http://jasmine.github.io/)
+ * [Karma](https://karma-runner.github.io/0.13/index.html)
+ * [JSPM](http://jspm.io/)
+ * [Browser-sync](https://www.browsersync.io/)
 
-  ```shell
-  npm install -g karma-cli
-  ```
-2. Install Aurelia libs for test visibility:
+### The following technologies are being used in the deployed version of this site at [ahmedmodan.com](http://ahmedmodan.com):
+ * [Ghost](https://ghost.org/)
+ * [NGINX](https://www.nginx.com/)
+ * [PM2](http://pm2.keymetrics.io/)
+ * [NVM](https://github.com/creationix/nvm)
 
-```shell
-jspm install aurelia-framework
-jspm install aurelia-http-client
-jspm install aurelia-router
-```
-3. You can now run the tests with this command:
+ ---
 
-  ```shell
-  karma start
-  ```
+ ## Resources
+ The following is a list of resources I used to build the initial version of this site.
+ As I continue to build upon this and use more resources to help me learn, I will keep this updated.
 
-## Running The E2E Tests
-Integration tests are performed with [Protractor](http://angular.github.io/protractor/#/).
+* [Aurelia Docs](http://aurelia.io/docs.html#/aurelia/framework/latest/doc/article/what-is-aurelia)
+  * Used for both initial client side set up and for the Skeleton provided. Much of the first part of
+  the readme for the app install and getting your app running is lifted straight from the readme for the aurelia skeleton.
+* [Aurelia App Structure](http://ilikekillnerds.com/2015/10/how-to-structure-an-aurelia-application/)
+* [Dependency Injection](https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841#.kbomj32py)
+  * To help me understand what decorators do and how dependency injection works
+  * **See Also:** [Object.defineProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
+* [KoaJs Docs](http://koajs.com/)
+  * [ES6 Generators](https://davidwalsh.name/es6-generators)
+  * [Co](https://www.npmjs.com/package/co)
+    * To help me understand what was being baked into Koa's middleware service to help it move through each generator function.
+* [Koa-Router](https://www.npmjs.com/package/koa-router)
 
-1. Place your E2E-Tests into the folder ```test/e2e/src```
-2. Install the necessary webdriver
+### The Following Resources were used to help me deploy this site alongside Ghost on Digital Ocean
 
-  ```shell
-  gulp webdriver-update
-  ```
-
-3. Configure the path to the webdriver by opening the file ```protractor.conf.js``` and adjusting the ```seleniumServerJar``` property. Typically its only needed to adjust the version number.
-
-4. Make sure your app runs and is accessible
-
-  ```shell
-  gulp watch
-  ```
-
-5. In another console run the E2E-Tests
-
-  ```shell
-  gulp e2e
-  ```
-
-## Exporting bundled production version
-A gulp task is already configured for that. Use the following command to export the app:
-
-  ```shell
-    gulp export
-  ```
-The app will be exported into ```export``` directory preserving the directory structure.
-#### Configuration
-The configuration is done by ```bundles.json``` file.
-In addition, ```export.json``` file is available for including individual files.
+* [Digital Ocean - Node and Ubuntu Tutorial](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-14-04)
+* [SSH set up](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04)
+* [NGINX set up for pushState URLs](http://stackoverflow.com/questions/9184959/rewriting-nginx-for-pushstate-urls)
+* [Setting up a Host Name for Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-host-name-with-digitalocean)
+* [Managing Node with PM2 and NGINX](https://doesnotscale.com/deploying-node-js-with-pm2-and-nginx/)
+* [Managing different Versions of Node with NVM](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-with-nvm-node-version-manager-on-a-vps)
+* [Running Node with different versions with PM2 and NVM](https://github.com/Unitech/PM2/issues/1034)
+* [Installing Ghost on Ubuntu](https://www.howtoinstallghost.com/how-to-install-ghost-on-ubuntu-server-12-04/)
+  * TODO: add link to blog post about problems with running ghost and another server with two different versions of node
+* [Ghost with PM2](https://www.allaboutghost.com/keep-ghost-running-with-pm2/)
