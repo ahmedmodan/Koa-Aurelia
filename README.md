@@ -61,7 +61,7 @@ This will serve up the static assets from the node server so you can run the app
   gulp watch
   ```
   * Browse to [http://localhost:9000](http://localhost:9000) to see the app. You can make changes in the code found under `src` and the browser should auto-refresh itself as you save files.
-  >**Note:** Browsing the app at while running `gulp watch` will not run the node server. If you want to run the node server follow steps 7 and 8.
+  > **Note:** Browsing the app at while running `gulp watch` will not run the node server. If you want to run the node server follow steps 7 and 8.
 
 
 ## Bundling
@@ -76,6 +76,8 @@ You can also unbundle using the command bellow:
   ```shell
   gulp unbundle
   ```
+
+
 
 ---
 
@@ -95,7 +97,7 @@ You can also unbundle using the command bellow:
  * [JSPM](http://jspm.io/)
  * [Browser-sync](https://www.browsersync.io/)
 
-### The following technologies are being used in the deployed version of this site at [ahmedmodan.com](http://ahmedmodan.com):
+#### The following technologies are being used in the deployed version of this site:
  * [Ghost](https://ghost.org/)
  * [NGINX](https://www.nginx.com/)
  * [PM2](http://pm2.keymetrics.io/)
