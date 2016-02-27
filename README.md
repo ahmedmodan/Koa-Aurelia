@@ -100,14 +100,15 @@ You can also unbundle using the command bellow:
 #### The following technologies are being used in the deployed version of this site:
  * [Ghost](https://ghost.org/)
  * [NGINX](https://www.nginx.com/)
- * [PM2](http://pm2.keymetrics.io/)
+ * [PM2](http://pm2.keymetrics.io/) 
  * [NVM](https://github.com/creationix/nvm)
 
- ---
 
- ## Resources
- The following is a list of resources I used to build the initial version of this site.
- As I continue to build upon this and use more resources to help me learn, I will keep this updated.
+---
+
+## Resources
+The following is a list of resources I used to build the initial version of this site.
+As I continue to build upon this and use more resources to help me learn, I will keep this updated.
 
 * [Aurelia Docs](http://aurelia.io/docs.html#/aurelia/framework/latest/doc/article/what-is-aurelia)
   * Used for both initial client side set up and for the Skeleton provided. Much of the first part of
