@@ -2,8 +2,8 @@ const koa = require('koa');
 const koaRouter = require('koa-router');
 const generators = require('./server/generators/generatorExports');
 // UNCOMMENT THE FOLLOWING LINES TO RUN WITHOUT NGINX
-// const serve = require('koa-static');
-// const historyApiFallback = require('koa-connect-history-api-fallback');
+const serve = require('koa-static');
+const historyApiFallback = require('koa-connect-history-api-fallback');
 
 generators.iterator();
 generators.alphabet();
@@ -25,8 +25,8 @@ router.get('/api/test', function* () {
 });
 
 // UNCOMMENT THE FOLLOWING LINES TO RUN WITHOUT NGINX
-// app.use(historyApiFallback());
-// app.use(serve(`${__dirname}/public`));
+app.use(historyApiFallback());
+app.use(serve(`${__dirname}/public`));
 app.use(router.routes());
 
 app.listen(3008);

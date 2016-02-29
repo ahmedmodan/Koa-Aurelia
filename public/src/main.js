@@ -9,5 +9,5 @@ export function configure(aurelia) {
   // When not component specified in setRoot, root component
   // is set to the html tag  with the aurelia-app attribute
   // otherwise we can set to
-  aurelia.start().then(() => aurelia.setRoot());
+  aurelia.start().then((a) => a.setRoot('app', document.body));
 }

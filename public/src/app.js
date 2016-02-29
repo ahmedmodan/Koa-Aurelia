@@ -5,20 +5,28 @@ export default class App {
     config.options.hashChange = false;
     config.map([
       {
-        route: ['', 'counter'],
+        route: '',
+        name: 'landing',
+        moduleId: './routes/landing/index',
+        nav: false,
+        title: ''
+      },
+      {
+        route: 'counter',
         name: 'counter',
-        moduleId: './pages/counter/index',
+        moduleId: './routes/counter/index',
         nav: true,
         title: 'Counter'
       },
       {
         route: 'show-name',
         name: 'name',
-        moduleId: './pages/showname/index',
+        moduleId: './routes/showname/index',
         nav: true,
         title: 'Name'
       }
     ]);
+    config.mapUnknownRoutes(instruction => './routes/unknownroute/index');
     this.router = router;
   }
 
