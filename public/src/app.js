@@ -26,6 +26,7 @@ export default class App {
         title: 'Name'
       }
     ]);
+    config.mapUnknownRoutes(instruction => './routes/unknownroute/index');
     this.router = router;
   }
 
