@@ -5,11 +5,11 @@ export default class App {
     config.options.hashChange = false;
     config.map([
       {
-        route: ['', 'landing'],
+        route: '',
         name: 'landing',
         moduleId: './routes/landing/index',
         nav: false,
-        title: 'landing'
+        title: ''
       },
       {
         route: 'counter',

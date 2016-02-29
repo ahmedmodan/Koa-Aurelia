@@ -1,6 +1,15 @@
-export default class Counter {
+import { inject } from 'aurelia-framework';
+import counterState from '../../services/counterState';
 
-  count = 0;
+@inject(counterState)
+export default class Counter {
+  constructor(count) {
+    this.count = count.count;
+  }
+
+  deactivate() {
+    counterState.count = this.count;
+  }
 
   increment = () => {
     this.count++;
