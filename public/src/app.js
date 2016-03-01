@@ -24,6 +24,13 @@ export default class App {
         moduleId: './routes/showname/index',
         nav: true,
         title: 'Name'
+      },
+      {
+        route: 'portfolio',
+        name: 'portfolio',
+        moduleId: './routes/portfolio/index',
+        nav: true,
+        title: 'Portfolio'
       }
     ]);
     config.mapUnknownRoutes(instruction => './routes/unknownroute/index');
