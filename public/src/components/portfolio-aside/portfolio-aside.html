@@ -1,0 +1,7 @@
+<template bindable="router, navPref">
+  <ul>
+    <li repeat.for="row of router.navigation">
+      <a click.trigger="saveNavPref" href.bind="row.href">${row.title}</a>
+    </li>
+  </ul>
+</template>
