@@ -1,8 +1,19 @@
+import navPrefState from '../../services/navPrefState';
+import { inject } from 'aurelia-framework';
+
+@inject(navPrefState)
 export default class Portfolio {
+  constructor(navState) {
+    this.navState = navState;
+  }
   configureRouter(config, router) {
     config.map([
       {
-        route: ['', 'code'],
+        route: '',
+        redirect: 'code'
+      },
+      {
+        route: 'code',
         name: 'code',
         moduleId: './code/index',
         nav: true,
@@ -17,5 +28,13 @@ export default class Portfolio {
       }
     ]);
     this.router = router;
+  }
+
+  activate(params, routeConfig, navigationInstruction) {
+    if (this.navState.portfolio === 'CODE') {
+      this.router.navigate('portfolio/code');
+    } else {
+      this.router.navigate('portfolio/photography');
+    }
   }
 }
